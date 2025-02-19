@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive and engaging study abroad consultation platform">
+    <title>Portfoliyo</title>
+    <link rel="shorcut icon" href="img/s logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .hero-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        .services-section,
+        .countries-section,
+        .testimonials-section {
+            padding: 60px 0;
+        }
+
+        .footer {
+            background: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .country-box {
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .country-box img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .country-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .testimonial-card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .top-universities-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+
+        .university-box {
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .university-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .university-box img {
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .consultation-section {
+            background-color: #f8f9fa;
+        }
+
+        .consultation-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .consultation-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        #consultation-form .form-label {
+            font-weight: 500;
+        }
+
+        #consultation-form .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        #consultation-form .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        #consultation-form {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        #hero-form {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #hero-form .form-label {
+            font-weight: 500;
+        }
+
+        #hero-form .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        #hero-form .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        #textX2 {
+            margin-top: -300px;
+
+        }
+        .card{
+            height: 140px;
+            width: 50%;
+            border: 4px solid black;
+            font-size: 5em;
+            border-radius: 10%;
+            align-items: center;
+            display: flex;
+            text-align: center;
+        }
+    </style>
+  
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="Portfoliyo.html">Shivshnakar Gupta</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">How We Help</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#project">Project's</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section text-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Content -->
+                <div class="col-md-5 text-md-start " id="textX">
+                    <h2>Welcome to Creative Space!....(ツ)</h2>
+                    <p style="font-size: 1.5em; margin-top: 40px;">Hey there! I'm Shivshnakar, a Software Engineer
+                        passionate about web developer specializing in creating dynamic and responsive websites.Let's
+                        create something amazing together!......
+                        (◕‿◕) </p>
+
+                    <div class="text-box" style="margin-left: 50px; margin-bottom:100px ;">
+                        <h1 class="fs-30 "><b style="color:gold;">I'm </b><span class="auto-input"></span></h1>
+                    </div>
+                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+                </div>
+                <div class="col-sm-3" id="textX2">
+                    <img src="img/shiv1.jpg" style="height: 500px; border-radius: 100%;padding-top: 180px;">
+                </div>
+                <!-- Right Form -->
+                <div class="col-md-4">
+                    <div class="p-4 border rounded shadow-sm bg-white">
+                        <h2 class="mb-4">Get in Touch</h2>
+                        <form id="hero-form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" id="name" name="name" class="form-control"
+                                    placeholder="Enter your full name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-control"
+                                    placeholder="Enter your email address" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" id="phone" name="phone" class="form-control"
+                                    placeholder="Enter your phone number" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="zip-code" class="form-label">Zip Code</label>
+                                <input type="text" id="zip-code" name="zip-code" class="form-control"
+                                    placeholder="Enter your zip code" required>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" id="consent" name="consent" class="form-check-input" required>
+                                <label for="consent" class="form-check-label">
+                                    Agree to terms & conditions
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="text-center mb-5">How We Help</h2>
+            <div class="row">
+                <div class="col-sm-4 text-center">
+                    <img src="img/OIP.jpg" alt="Test Preparation" class="img-fluid mb-3">
+
+                    <h3>SSIC College (2021-22)</h3>
+                    <hr>
+                    <h6>10th (HIGH SCHOOL) Roll no 1222516380 ( 81.66% )</h6>
+
+                </div>
+                <div class="col-sm-4 text-center">
+                    <img src="img/mt logo.jpg" height="235px" alt="Test Preparation">
+
+                    <h3 class="mt-3">Lucknow (2023-25)</h3>
+                    <hr>
+                    <h6>(Summertraning(4 month) & internship(6 month))</h6>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <img src="img/Campus-View of Dev Bhoomi Institute of Polytechnic Saharanpur_Campus-view.jpg"
+                        height="235px" alt="Test Preparation">
+
+                    <h3 class="mt-3">G.P SRE (2022-25)</h3>
+                    <hr>
+                    <h6>Diploma (Computer Science Engineering)</h6>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="project" class="countries-section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">My projects</h2>
+            <div class="row text-center">
+               
+                <div class="col-md-4  mt-2">
+                    <div class="country-box">
+                        <img src="img/HMS.png" alt="Canada">
+                        <h3>Hospatial management</h3>
+                    </div>
+                </div>
+                <div class="col-md-4  mt-2">
+                    <div class="country-box">
+                        <img src="img/BOOK APPOINMENT.jpg" alt="The UK">
+                        <h3>Book Appointment</h3>
+                    </div>
+                </div>
+                <div class="col-md-4  mt-2">
+                    <div class="country-box">
+                        <img src="img/CALLDOC.webp" alt="Ireland">
+                        <h3>CallDoc</h3>
+                    </div>
+                </div>
+                <div class="col-md-4  mt-2">
+                    <div class="country-box">
+                        <img src="img/SKYPEIA.png" alt="Australia">
+                        <h3>Skipya</h3>
+                    </div>
+                </div>
+              
+                
+                <div class="col-md-4  mt-2">
+                    <div class="country-box">
+                        <img src="img/PMST+.png" alt="New Zealand">
+                        <h3>PMSJ</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="country-box">
+                        <img src="img/evillage.png" alt="USA">
+                        <h3>eVilage</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 class="text-center mb-5">I'm proficient in these programming languages."</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <img src="img/Asp.net.png" alt="Jane Doe">
+                                    <div>
+                                        <p>"ASP.NET is a framework for building dynamic web applications"</p>
+                                        <h4>ASP.NET</h4>
+                                        <p>framework for C# language</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <img \-/ src="img/c programing.jpg" alt="John Smith">
+                                    <div>
+                                        <p> foundational language & applications, emphasizing efficiency"</p>
+                                        <h4>C programing language</h4>
+                                        <p>1970s by Dennis Ritchie at Bell Labs</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <img src="img/Php.png" alt="Emily Davis">
+                                    <div>
+                                        <p>"server-side scripting language for web development,simplicity and flexibility"</p>
+                                        <h4>PHP</h4>
+                                        <p>Rasmus Lerdorf in 1994</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <img src="img/C++.webp" alt="Michael Brown">
+                                    <div>
+                                        <p>"C++ includes object-oriented features, widely used in various applications"</p>
+                                        <h4>C++</h4>
+                                        <p>Bjarne Stroustrup in the early 1980s</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <img src="img/java.jpg" alt="Sophia Wilson">
+                                    <div>
+                                        <p>"object-oriented used for building cross-platform applications"</p>
+                                        <h4>JAVA</h4>
+                                        <p>Sun Microsystems 1995</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <img src="img/js.jpg" alt="Daniel Lee">
+                                    <div>
+                                        <p>"creating dynamic and interactive web content."</p>
+                                        <h4>javascript</h4>
+                                        <p>Brendan Eich in 1995</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <img src="img/Screenshot 2025-02-15 113122.png" alt="Michael Brown">
+                                    <div>
+                                        <p>"focuses on designing visually appealing and interactive interfaces.."</p>
+                                        <h4>UI (User interface)</h4>
+                                        <p>HTML CSS JS BOOTSTRAP etc.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <img src="img/python_django.jpg" alt="Sophia Wilson">
+                                    <div>
+                                        <p>"Python is versatile; Django is a high-level framework for web development"</p>
+                                        <h4>PYTHON (Django)</h4>
+                                        <p>Python framework Django</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <img src="img/C_shapimage.jpg" alt="Sophia Wilson">
+                                    <div>
+                                        <p>"Highly professional and supportive team at IOES."</p>
+                                        <h4>C#</h4>
+                                        <p>microshoft language</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="text-center mb-5">
+                <a href="#" class="btn btn-primary" target="_blank">See Our
+                    Google Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="partnerships" class="partnerships-section">
+        <div class="container">
+            <h2 class="text-center mb-5"> Social Network</h2>
+            <div class="row m-5 text-center">
+                <div class="col-md-3">
+                    <div class="partnership-box">
+                       <div class="card text-center">
+                        <a href="#"><i class="bi bi-instagram  red"></i></a>
+                       </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="partnership-box">
+                        <div class="card text-center">
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                           </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="partnership-box">
+                        <div class="card text-center">
+                            <a href="#"><i class="bi bi-youtube"></i></a>
+                           </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="partnership-box">
+                        <div class="card text-center">
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                           </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="top-universities" class="top-universities-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Top Universities</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="https://www.university1.edu" target="_blank"
+                        class="university-box d-block text-center text-decoration-none">
+                        <img src="assets/university1-logo.png" alt="University 1" class="img-fluid mb-3"
+                            style="max-height: 100px;">
+                        <h5 class="text-dark">University 1</h5>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://www.university2.edu" target="_blank"
+                        class="university-box d-block text-center text-decoration-none">
+                        <img src="assets/university2-logo.png" alt="University 2" class="img-fluid mb-3"
+                            style="max-height: 100px;">
+                        <h5 class="text-dark">University 2</h5>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://www.university3.edu" target="_blank"
+                        class="university-box d-block text-center text-decoration-none">
+                        <img src="assets/university3-logo.png" alt="University 3" class="img-fluid mb-3"
+                            style="max-height: 100px;">
+                        <h5 class="text-dark">University 3</h5>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://www.university4.edu" target="_blank"
+                        class="university-box d-block text-center text-decoration-none">
+                        <img src="assets/university4-logo.png" alt="University 4" class="img-fluid mb-3"
+                            style="max-height: 100px;">
+                        <h5 class="text-dark">University 4</h5>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://www.university5.edu" target="_blank"
+                        class="university-box d-block text-center text-decoration-none">
+                        <img src="assets/university5-logo.png" alt="University 5" class="img-fluid mb-3"
+                            style="max-height: 100px;">
+                        <h5 class="text-dark">University 5</h5>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://www.university6.edu" target="_blank"
+                        class="university-box d-block text-center text-decoration-none">
+                        <img src="assets/university6-logo.png" alt="University 6" class="img-fluid mb-3"
+                            style="max-height: 100px;">
+                        <h5 class="text-dark">University 6</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="free-consultation" class="consultation-section py-5">
+        <div class="container">
+
+            <div class="row align-items-center">
+                <!-- Content Section -->
+                <div class="col-md-6">
+                    <h2 class="mb-4">Book Your FREE Consultation</h2>
+                    <p>
+                        Take the first step towards your study abroad journey with our expert guidance.
+                        Our counselors are here to assist you with personalized solutions tailored to your needs.
+                    </p>
+                    <ul>
+                        <li>Expert career advice</li>
+                        <li>Top university recommendations</li>
+                        <li>Step-by-step application assistance</li>
+                    </ul>
+                    <p>Contact us today and explore endless opportunities!</p>
+                </div>
+
+                <!-- Form Section -->
+                <div class="col-md-6">
+                    <form id="consultation-form" class="p-4 border rounded shadow-sm bg-white">
+                        <div class="mb-3">
+                            <label for="first-name" class="form-label">First Name</label>
+                            <input type="text" id="first-name" name="first-name" class="form-control"
+                                placeholder="Enter your first name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="last-name" class="form-label">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" class="form-control"
+                                placeholder="Enter your last name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control"
+                                placeholder="Enter your email address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control"
+                                placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="study-destination" class="form-label">Study Destination</label>
+                            <select id="study-destination" name="study-destination" class="form-select" required>
+                                <option value="" disabled selected>Select your destination</option>
+                                <option value="usa">USA</option>
+                                <option value="canada">Canada</option>
+                                <option value="uk">UK</option>
+                                <option value="australia">Australia</option>
+                                <option value="ireland">Ireland</option>
+                                <option value="new-zealand">New Zealand</option>
+                                <option value="europe">Europe</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Brief Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="4"
+                                placeholder="Share your goals or queries"></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" id="consent" name="consent" class="form-check-input" required>
+                            <label for="consent" class="form-check-label">
+                                Agree to receive calls from IOES counselors
+                            </label>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <h3>Contact Us</h3>
+            <p>Email: info@Portfoliyo.in | Phone: +91 9458038009</p>
+            <p>&copy; 2025 Portfoliyo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let typed = new Typed(".auto-input", {
+                strings: ["a Developer..!!", "a Designer..!!", "a Creator..!!", "Freelancer...❤️❤️"],
+                typeSpeed: 100,
+                backSpeed: 100,
+                loop: true
+            });
+        });
+
+
+        // Update the count on the page
+        // Get the count from localStorage or default to 10000
+        let count = parseInt(localStorage.getItem('refreshCount')) || 10000;
+
+        // Update the count on the page
+        document.getElementById('count').textContent = count;
+
+        // Increment the count and update on page refresh
+        count++;
+        localStorage.setItem('refreshCount', count.toString());
+
+
+
+    </script>
+</body>
+
+</html>
